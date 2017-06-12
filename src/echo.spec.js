@@ -1,12 +1,18 @@
 import { echoOnce } from './echo.js';
 
-describe('echoOnce', () => {
+describe('echo', () => {
   beforeEach(() => {
     console.log = jest.fn();
   });
 
-  it('should echo input', () => {
-    echoOnce('hello world');
-    expect(console.log).toBeCalledWith('hello world');
+  describe('echoOnce', () => {
+    it('should echo input', () => {
+      echoOnce('hello world');
+      expect(console.log).toBeCalledWith('hello world');
+    });
+  });
+
+  describe('echoTwice', () => {
+    // TODO: Write test
   });
 });
